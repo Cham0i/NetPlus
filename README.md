@@ -1,5 +1,12 @@
 # NetPlus
 
+1) SUBNETTING
+2) NETWORK OPERATIONS
+3) PORTS
+4) TERMINOLOGY
+
+# SUBNETTING
+
 Every computer has a IP address that uniquely identifies it in a logical topology.
 
 [alt text]()
@@ -14,7 +21,24 @@ A much simpler way to represent the subnet mask is by writting the number of bit
 
 However, things get tricky when the subnet mask designates a number that is not 255 or 0. This means that the point at which the NID ends and HID starts is within an octet. 
 
+# NETWORK OPERATIONS
+
+communications within a LAN
+
+communications between networks
+
 RARP (Reverse Address Resolution Protocol) Maps a MAC to an IP address. This is the oppossite of ARP which maps a IP address to a MAC. Both work by broadcasting and listening to a response by the device that matches the MAC or IP.
+
+Network auxiliaries
+NIC Teaming: It allows multiple NICs to operate as a single virtual NIC. It is used as a way to load balance traffic and provide redundancy
+Content Delivery Network: The use of edge servers that have a cache of the information stored in the original server in order to improve delivery speed. Basically if you live in the south you will connect to the U.S south server instead of the Taiwan server.
+
+
+# PORTS AND PROTOCOLS
+
+Link Aggregation Control Protocol (LACP): NIC Teaming with Cisco switches  IEEE 802.3ad  
+
+# TERMINOLOGY
 
 Cycle Redundancy Check Error : The check for redundancy tested false meaning data was corrupted or changed without permission.
 
@@ -22,13 +46,7 @@ Neighbor Discovery Protocol: The Ipv6 version of ARP
 
 Tx means Transmission and Rx means Reception
 
-NIC Teaming: It allows multiple NICs to operate as a single virtual NIC. It is used as a way to load balance traffic and provide redundancy
-
-Content Delivery Network: The use of edge servers that have a cache of the information stored in the original server in order to improve delivery speed. Basically if you live in the south you will connect to the U.S south server instead of the Taiwan server.
-
 Carrier Sense Multiple Access/ Collision Detection (CSMA/CD): A method of exchanging data commonly used in BUS coaxial networks. It ensures that data isn't bumping into each other by designating specific times for data to be transmitted between devices. 
-
-Link Aggregation Control Protocol (LACP): NIC Teaming with Cisco switches  IEEE 802.3ad  
 
 Medium Dependant Interface vs MDIX (crossover): A MDI NIC has pins 1 and 2 for Tx and 3, 6 Rx. A MDIX NIC has 1, 2 Rx and 3, 4 Tx. Typically end devices have MDI NICs and switches have MDIX NICs. This is the reason why ethernet cables don't need to have A code and B code ends (crossover cables). A crossover cable would be required in order to make end devices (which both use MDI NICs) communicate with each other.
 
