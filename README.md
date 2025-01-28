@@ -33,10 +33,39 @@ Network auxiliaries
 NIC Teaming: It allows multiple NICs to operate as a single virtual NIC. It is used as a way to load balance traffic and provide redundancy
 Content Delivery Network: The use of edge servers that have a cache of the information stored in the original server in order to improve delivery speed. Basically if you live in the south you will connect to the U.S south server instead of the Taiwan server.
 
+## Routing Technology
+
+[Administrative distance, Measurement used by protocol]
+
+Distance vector routing constantly advertise their routing tables, while Linked state routing only advertises changes to their tables.
+
+Routine Information Protocol (RIP): [120/hop] Distance vector. Uses the number of nodes between the Tx and Rx, or hop count, to determine favorability.
+Open Shortest Path First (OSPF): [110,X] Link state. Uses Dijkstra algorithim to determine favorability
+Enhanced Interior Gateway Routing Protocol (EIGRP): [90/x] Distance vector and linked state routing hybrid.
+Border Gateway Protocol (BGP): Path vector protocol. Used between different autonomous systems on the internet???
+Intermediate System to Intermediate System (IS-IS): Linked state. Mostly used between ISPs.
+
+## Network Topologies
+
+Hub and spoke/ Star. Everything is connected to one source and only that source.
+Ad Hoc/ P2P. Connections are decentralized
+Mesh. Everything is connected to everything else
+Point to point is direct conection between two computers
+Tree/ Hierarchy. self explanitory
+
+https://www.geeksforgeeks.org/simple-network-management-protocol-snmp/
+
+Channels 1, 6, and 11 are the only channels that don't overlap in WAPs.
+
+
+
+
 
 # PORTS AND PROTOCOLS
 
 Link Aggregation Control Protocol (LACP): NIC Teaming with Cisco switches  IEEE 802.3ad  
+
+Spanning Tree Protocol is used to create a topology without loops.
 
 # TERMINOLOGY
 
@@ -53,3 +82,7 @@ Medium Dependant Interface vs MDIX (crossover): A MDI NIC has pins 1 and 2 for T
 IP Scanner:  It gathers information about their hostnames, IP addresses, MAC addresses, ping, ports, and NETBios information
 
 Common Vulnerabilities and Exposures (CVE): Database of vulnerabilities operated by the MITRE corp.
+
+Port mirroring: Copies packets and sends the copy for its contents to be investigated.
+
+Split Tunnel VPN only route packets that are within the subnet. While full tunnel VPN have every packet sent through the VPN
